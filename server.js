@@ -26,12 +26,9 @@ app.use((req, res, next) =>{
 
 app.use(express.static(__dirname+ '/public'));
 
-/*app.get('/', (requ, res) =>{
-    res.send({
-        name: 'Siva',
-        likes:[ 'Biking' ]
-    });
-});*/
+app.get('/', (requ, res) =>{
+    res.render('home.hbs');
+});
 
 app.get('/about', (req,res) => {
     res.render('about.hbs');
